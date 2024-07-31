@@ -7,7 +7,7 @@ import {
   StreamTextResult,
   tool,
 } from 'ai'
-import { anthropic } from '@ai-sdk/anthropic'
+import { openai } from '@ai-sdk/openai'
 
 import {
   runPython,
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
 
   if (template === SandboxTemplate.CodeInterpreterMultilang) {
     result = await streamText({
-      model: anthropic('claude-3-5-sonnet-20240620'),
+      model: openai('gpt-4o-mini'),
       tools: {
         runPython: tool({
           description: 'Runs Python code.',
@@ -73,7 +73,7 @@ export async function POST(req: Request) {
     })
   } else if (template === SandboxTemplate.NextJS) {
     result = await streamText({
-      model: anthropic('claude-3-5-sonnet-20240620'),
+      model: openai('gpt-4o-mini'),
       tools: {
         writeCodeToPageTsx: tool({
           description: 'Writes TSX code to the page.tsx file. You can use tailwind classes.',
