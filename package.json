@@ -1,5 +1,5 @@
 {
-  "name": "anthropic-power-artifacts",
+  "name": "openai-power-artifacts",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ai-sdk/anthropic": "^0.0.23",
+    "@ai-sdk/openai": "^4.53.2",
     "@e2b/code-interpreter": "^0.0.9-beta.3",
     "@radix-ui/react-dialog": "^1.1.1",
     "@radix-ui/react-tabs": "^1.1.0",
